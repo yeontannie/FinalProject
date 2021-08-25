@@ -447,3 +447,26 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210824193521_tags')
+BEGIN
+    CREATE TABLE [Tag] (
+        [Text] nvarchar(450) NOT NULL,
+        [Count] int NOT NULL,
+        CONSTRAINT [PK_Tag] PRIMARY KEY ([Text])
+    );
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210824193521_tags')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20210824193521_tags', N'5.0.9');
+END;
+GO
+
+COMMIT;
+GO
+

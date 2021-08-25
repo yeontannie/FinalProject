@@ -201,4 +201,3 @@ C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.Facebook.dll
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.Twitter.dll
-C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\Razor\Views\Home\LastAddedItems.cshtml.g.cs

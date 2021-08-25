@@ -6,7 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using System.Web.WebPages.Html;
 
 namespace FinalProject.Controllers
 {
@@ -23,6 +25,7 @@ namespace FinalProject.Controllers
 
         public IActionResult Index()
         {
+            PopularTags();
             BigCollections();
             LastItems();
             return View();
@@ -46,6 +49,16 @@ namespace FinalProject.Controllers
             ViewBag.BigCollections = collectionsQuery.Reverse().ToList();
         }
 
+        public void PopularTags()
+        {
+            var tagsQuery = from t in _context.Tag
+                            where t.Count > 0
+                            orderby t.Count
+                            select t;
+
+            ViewBag.Tags = tagsQuery.Reverse().ToList();
+        }
+        
         public IActionResult Privacy()
         {
             return View();

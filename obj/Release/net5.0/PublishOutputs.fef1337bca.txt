@@ -1,8 +1,6 @@
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\FinalProject.exe
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\css\site.css
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
-C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\heart (1).png
-C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\heart.svg
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\js\site.js
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\tania stasiuk\source\repos\FinalProject\FinalProject\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
