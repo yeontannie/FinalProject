@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Collection Storage</h1>
+    &nbsp;&nbsp;
+</div>
+
+<div class="row">
+    <div class="column" style="width: 33%">
+        <h3>Tags</h3>
+        <hr />
+    </div>
+
+    <div class="column" style="width: 33%">
+        <h3>Biggest Collections</h3>
+        <hr />
+        @for (int i = 0; i < (ViewBag.BigCollections.Count < 5 ? ViewBag.BigCollections.Count : 5); i++)
+        {
+            <p><a asp-controller="Collections" asp-action="Details" asp-route-id="@ViewBag.BigCollections[i].CollectionID">@ViewBag.BigCollections[i].Name.ToString()</a></p>
+            <hr />
+        }
+    </div>
+
+    <div class="column" style="width: 33%">
+        <h3>Last Added Items</h3>
+        <hr />
+        @for (int i = 0; i < (ViewBag.LastItems.Count < 5 ? ViewBag.LastItems.Count : 5); i++)
+        {
+            <p><a asp-controller="Items" asp-action="Details" asp-route-id="@ViewBag.LastItems[i].Id">@ViewBag.LastItems[i].Name.ToString()</a></p>
+            <hr />         
+        }
+    </div>
+</div>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbi95uIyevEKSrwQkAWCJLAAAAAACAAAAAAAQZgAAAAEAACAAAAARVJWEAsEgnpdcFdn+wQXT2QqXiKbEnvHqifOrGrj0aQAAAAAOgAAAAAIAACAAAADpQtMK6lZHypZErI+xS8oPQTnSVxnq6QKT6DpFrON9SoAAAAAgu2EaEz5pIvqOTOoAYq84oFtqIZn0088eRZLj28QszwyjcuczMeDXnRGs/mML/TpcFvw8T1eE47VdYrXgXIDGQRRh+9tWCnoO85yyNI+Nj0F3gSdkJk/xvIbjI3UMcOAAKRp4o//5pSe3fMH18/cs/RFFy2c4uP92s3OCE1zcs0AAAABi1oIlVlTtsAVTkxjWiqUx9d6vqljVL3qBpjIKvEAP5wMVhc1u83RMf1bwXkUrBXjMzr+NQerDuvYKdlvPP5V7</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tcp:collectiondb-server.database.windows.net,1433;Initial Catalog=collection-db;User Id=dbadmin@collectiondb-server;Password=goldenmaknae97" />
+    <AzureDBConnectionStrings Include="Data Source=tcp:collectiondb-server.database.windows.net,1433;Initial Catalog=collection-db;User Id=tania@collectiondb-server;Password=goldenmaknae97!" />
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:collectiondb-server.database.windows.net,1433%3bInitial Catalog=collection-db%3bUser Id=tania%40collectiondb-server%3bPassword=goldenmaknae97!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="FinalProject.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:collectiondb-server.database.windows.net,1433%3bInitial Catalog=collection-db%3bUser Id=tania%40collectiondb-server%3bPassword=goldenmaknae97!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

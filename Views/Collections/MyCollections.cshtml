@@ -1,0 +1,51 @@
+﻿@model IEnumerable<FinalProject.Models.Collection>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<h1>My Collections</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Theme)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Theme)
+            </td>
+            <td>
+                @if (User.Identity.Name.ToString() == item.User_Name)
+                {
+                    <a asp-action="Edit" asp-route-id="@item.CollectionID">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.CollectionID">Delete</a>
+                }
+                <a asp-action="Details" asp-route-id="@item.CollectionID">Details</a>
+                <a asp-controller="Items" asp-action="ShowItems" asp-route-id="@item.CollectionID">Items</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
