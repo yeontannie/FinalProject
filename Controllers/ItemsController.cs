@@ -206,6 +206,8 @@ namespace FinalProject.Controllers
             {
                 try
                 {
+                    DeleteTag(item.Tag);
+                    AddTag(item.Tag);
                     _context.Update(item);
                     await _context.SaveChangesAsync();
                 }

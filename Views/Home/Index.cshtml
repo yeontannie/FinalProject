@@ -11,13 +11,11 @@
     <div class="column" style="width: 33%">
         <h3>Popular Tags</h3>
         <hr />
-        @{
-            @for (int i = 0; i < (ViewBag.Tags.Count < 7 ? ViewBag.Tags.Count : 7); i++)
-            {
-                <p><a asp-controller="Items" asp-action="ShowSearchResults" asp-route-SearchPhrase="@ViewBag.Tags[i].Text.ToString()">@ViewBag.Tags[i].Text.ToString()</a></p>
-                <hr />
-            }
-        }        
+        @for (int i = 0; i < (ViewBag.Tags.Count < 7 ? ViewBag.Tags.Count : 7); i++)
+        {
+            <p><a asp-controller="Items" asp-action="ShowSearchResults" asp-route-SearchPhrase="@ViewBag.Tags[i].Text.ToString()">@ViewBag.Tags[i].Text.ToString()</a></p>
+            <hr />
+        }              
     </div>
 
     <div class="column" style="width: 33%">
