@@ -7,7 +7,6 @@ using FinalProject.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
-using System;
 
 namespace FinalProject.Controllers
 {
@@ -84,7 +83,7 @@ namespace FinalProject.Controllers
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> Comment([Bind("CommentID,User_Name,Text,ItemID")] Comment comment)
-        {
+        {            
             var item = GetItem(comment.ItemID);
             item.Comments = item.Comments ?? new List<Comment>();
 
@@ -114,15 +113,14 @@ namespace FinalProject.Controllers
                 {
                     _context.Remove(l);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { id = l.ItemID });                   
+                    return RedirectToAction("Details", new { id = l.ItemID });
                 }
             }
-
             if (ModelState.IsValid)
             {
                 _context.Add(like);
                 await _context.SaveChangesAsync();
-            }            
+            }
             return RedirectToAction("Details", new { id = like.ItemID });
         }
 
